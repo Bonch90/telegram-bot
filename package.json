@@ -1,13 +1,13 @@
 {
-  "name": "chat-example",
-  "version": "0.0.0",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
+  "name": "pokefilter_bot",
+  "version": "0.0.1",
+  "description": "Telegram bot that filters pokespawn links",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "repository": "",
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "author": "Marco Bon <marco.bon@icloud.com>",
   "dependencies": {
     "async": "~0.2.8",
     "express": "~3.2.4",
