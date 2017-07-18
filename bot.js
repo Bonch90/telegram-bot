@@ -24,12 +24,18 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
   var link = '';
+  var lat = '';
+  var lon = '';
   if(msg.entities != undefined){
     msg.entities.forEach(function(e){
           //console.log(e);
       if(e.type == 'text_link'){
-  
+
         link = e.url.substring(e.url.indexOf('http://maps'),e.url.length);
+        http://maps.google.com/maps?q=45.4413057289,12.3293683679
+        var latlon = link.substring(link.indexOf('?q=')+3, link.length).split(',');
+        lat = latlon[0];
+        lon = latlon[1];
         //link = e.url.match('.*(?=http://)');
       }
     })
@@ -40,4 +46,5 @@ bot.on('message', (msg) => {
 
   // send a message to the chat acknowledging receipt of their message
   bot.sendMessage(chatId, link);
+  bot.sendLocation(chatId, latitude=lat, longitude=lon);
 });
