@@ -46,5 +46,5 @@ bot.on('message', (msg) => {
 
   // send a message to the chat acknowledging receipt of their message
   bot.sendMessage(chatId, link);
-  bot.sendLocation(chatId, latitude=lat, longitude=lon, true);
+  bot.sendLocation(chatId, latitude=lat, longitude=lon, {disable_notification : true});
 });
